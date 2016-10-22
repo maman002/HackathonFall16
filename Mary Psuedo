@@ -1,0 +1,147 @@
+=====================================
+//main user class
+import java.util.ArrayList;
+public class User { public void run() { 
+
+ArrayList<String> userName = new ArrayList<String>(5);
+ArrayList<String> userPass = new ArrayList<String>(5);
+String usrnm;
+String pswd;
+
+//if login button pressed
+go to login class
+
+//if register button pressed
+go to register class
+
+}
+
+=====================================
+
+Successful/Unsuccessful Login
+int i = 0; 
+String fileName = "C:\\Users\\J Urguby\\Documents" + "\\NetBeansProjects\\UserPassPageScanner\\src\\userpasspagescanner\\userPass.txt"; 
+File file = new File(fileName); while (i == 0) { 
+Scanner keyboard = new Scanner(System.in); 
+System.out.println("Username:"); 
+String user = keyboard.next(); 
+System.out.println(“Password:"); 
+String pass = keyboard.next(); 
+try (Scanner input = new Scanner(file)) 
+{ 
+while (input.hasNextLine()) 
+{ 
+String[] line = input.nextLine().split(" "); 
+if (line[0].equals(user) && line[1].equals(pass)) 
+{ System.out.print("Welcome"); i = 1; } } 
+if(i==0) System.out.println("Password or Username is incorrect"); } 
+catch (Exception e) { System.out.println(e); } } }
+
+=====================================
+//unique registration
+import java.util.ArrayList;
+
+import java.util.Scanner; 
+public class Register implements User { public void run() { 
+
+Scanner scan = new Scanner (new File("the\\dir\\myFile.extension")); 
+
+Scanner keyboard = new Scanner (System.in);
+
+usrnm = scan.nextLine();
+pswd = scan.nextLine();
+
+String inpUser = keyboard.nextLine(); 
+String inpPass = keyboard.nextLine(); // gets input from user 
+
+boolean inUse = userName.contains(inpUser);
+
+if inUse == True
+{
+ System.out.println("Name is already in use");
+ //clear button
+}
+else
+{
+ userName.add(usrnm);
+ userPass.add(pswd);
+ System.out.println("Welcome");
+ //Move to next screen
+}
+
+=====================================
+//main events class
+
+import java.util.Scanner; 
+import java.util.ArrayList;
+public class Events implements Users { public void run() { 
+
+String eventOccasion;
+String eventName;
+ArrayList<String> eventUserNames = new ArrayList<String>(5);
+boolean accepted;
+
+//location icon clicked
+Event event = new Event();
+
+event.eventOccasion = //input from dropdown
+event.eventName = //input from additional info text box
+event.eventUserNames[] = //input from user name text box, new line used to indicate diff users;
+
+//if accept button pressed
+Event.accepted = TRUE;
+
+}
+
+=====================================
+//Invite users to event  - same for original invite and “invite others”
+
+import java.util.Scanner; 
+import java.util.ArrayList;
+public class Invite implements Events { public void run() { 
+
+//loop for all users added
+{
+ boolean activeUser = userName.contains(inpUser);
+
+ if activeUser == True
+ {
+  eventUserName.add(usrnm);
+ }
+
+}
+
+=====================================
+//Print out "My Events" list
+
+import java.util.Scanner; 
+import java.util.ArrayList;
+public class MyEvents implements Events { public void run() { 
+
+Event eventarrary[];
+
+Int i = 0;
+boolean eventUser = eventUserName.contains(usrnm);
+
+System.out.println("Response Required");
+
+While ( (eventarray[i] =! Null)  )
+{
+ If ((eventarray[i].eventList.contains(inpUser) == TRUE) && (accepted == FALSE)
+ {
+   System.out.println(eventarray[i].eventOccasion + eventarray[i].eventList);
+ }
+ I++;
+}
+
+System.out.println("Accepted Events");
+
+While ( (eventarray[i] =! Null)  )
+{
+ If ((eventarray[i].eventList.contains(inpUser) == TRUE) && (accepted == TRUE)
+ {
+   System.out.println(eventarray[i].eventList);
+ }
+ i++;
+}
+
