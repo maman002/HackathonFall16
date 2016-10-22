@@ -9,33 +9,48 @@ String usrnm;
 String pswd;
 
 //if login button pressed
-go to login class
+//go to login class
 
 //if register button pressed
-go to register class
+//go to register class
 
 }
 
 =====================================
+//Successful/Unsuccessful Login
 
-Successful/Unsuccessful Login
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Scanner; 
+public class Register implements User { public void run() { 
+
 int i = 0; 
 String fileName = "C:\\Users\\J Urguby\\Documents" + "\\NetBeansProjects\\UserPassPageScanner\\src\\userpasspagescanner\\userPass.txt"; 
-File file = new File(fileName); while (i == 0) { 
-Scanner keyboard = new Scanner(System.in); 
-System.out.println("Username:"); 
-String user = keyboard.next(); 
-System.out.println(“Password:"); 
-String pass = keyboard.next(); 
-try (Scanner input = new Scanner(file)) 
+File file = new File(fileName); 
+while (i == 0) 
 { 
-while (input.hasNextLine()) 
-{ 
-String[] line = input.nextLine().split(" "); 
-if (line[0].equals(user) && line[1].equals(pass)) 
-{ System.out.print("Welcome"); i = 1; } } 
-if(i==0) System.out.println("Password or Username is incorrect"); } 
-catch (Exception e) { System.out.println(e); } } }
+	Scanner keyboard = new Scanner(System.in); 
+	System.out.println("Username:"); 
+	String user = keyboard.next(); 
+	System.out.println(“Password:"); 
+	String pass = keyboard.next(); 
+	try (Scanner input = new Scanner(file)) 
+	{ 
+		while (input.hasNextLine()) 
+		{ 
+			String[] line = input.nextLine().split(" "); 
+			if (line[0].equals(user) && line[1].equals(pass)) 
+			{ 
+				System.out.print("Welcome"); i = 1; } } 
+			}
+				if(i==0) 
+				{
+					System.out.println("Password or Username is incorrect"); 
+			} 
+			
+}
+} 
+}
 
 =====================================
 //unique registration
@@ -56,7 +71,7 @@ String inpPass = keyboard.nextLine(); // gets input from user
 
 boolean inUse = userName.contains(inpUser);
 
-if inUse == True
+if (inUse == true)
 {
  System.out.println("Name is already in use");
  //clear button
@@ -74,7 +89,7 @@ else
 
 import java.util.Scanner; 
 import java.util.ArrayList;
-public class Events implements Users { public void run() { 
+public class Event implements Users { public void run() { 
 
 String eventOccasion;
 String eventName;
@@ -86,11 +101,12 @@ Event event = new Event();
 
 event.eventOccasion = //input from dropdown
 event.eventName = //input from additional info text box
-event.eventUserNames[] = //input from user name text box, new line used to indicate diff users;
+event.eventUserNames = //input from user name text box, new line used to indicate diff users;
 
 //if accept button pressed
-Event.accepted = TRUE;
+event.accepted = true;
 
+}
 }
 
 =====================================
@@ -98,17 +114,19 @@ Event.accepted = TRUE;
 
 import java.util.Scanner; 
 import java.util.ArrayList;
-public class Invite implements Events { public void run() { 
+public class Invite implements Event { public void run() { 
 
-//loop for all users added
+while (userName != null)
 {
- boolean activeUser = userName.contains(inpUser);
+	boolean activeUser = userName.contains(inpUser);
 
- if activeUser == True
- {
-  eventUserName.add(usrnm);
- }
+	if (activeUser == true)
+	{
+		eventUserName.add(usrnm);
+	}
 
+}
+}
 }
 
 =====================================
@@ -116,32 +134,32 @@ public class Invite implements Events { public void run() {
 
 import java.util.Scanner; 
 import java.util.ArrayList;
-public class MyEvents implements Events { public void run() { 
+public class MyEvents implements Event { public void run() { 
 
 Event eventarrary[];
 
-Int i = 0;
+int i = 0;
 boolean eventUser = eventUserName.contains(usrnm);
 
 System.out.println("Response Required");
 
-While ( (eventarray[i] =! Null)  )
+while ( (eventarray[i] =! null)  )
 {
- If ((eventarray[i].eventList.contains(inpUser) == TRUE) && (accepted == FALSE)
- {
-   System.out.println(eventarray[i].eventOccasion + eventarray[i].eventList);
- }
- I++;
+	If ((eventarray[i].eventList.contains(inpUser) == true) && (accepted == false)
+	{
+		System.out.println(eventarray[i].eventOccasion + eventarray[i].eventList);
+	}
+	i++;
 }
 
 System.out.println("Accepted Events");
 
-While ( (eventarray[i] =! Null)  )
+while ( (eventarray[i] =! Null)  )
 {
- If ((eventarray[i].eventList.contains(inpUser) == TRUE) && (accepted == TRUE)
- {
-   System.out.println(eventarray[i].eventList);
- }
- i++;
+	If ((eventarray[i].eventList.contains(inpUser) == true) && (accepted == true)
+	{
+		System.out.println(eventarray[i].eventList);
+	}
+	i++;
 }
 
