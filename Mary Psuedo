@@ -26,28 +26,30 @@ import java.util.Scanner;
 public class Register implements User { public void run() { 
 
 int i = 0; 
-String fileName = "C:\\Users\\J Urguby\\Documents" + "\\NetBeansProjects\\UserPassPageScanner\\src\\userpasspagescanner\\userPass.txt"; 
-File file = new File(fileName); 
+int userIndex = -1;
+String pswdIndex = null;
 while (i == 0) 
 { 
 	Scanner keyboard = new Scanner(System.in); 
 	System.out.println("Username:"); 
-	String user = keyboard.next(); 
+	String usrnm = keyboard.next(); 
 	System.out.println(“Password:"); 
-	String pass = keyboard.next(); 
-	try (Scanner input = new Scanner(file)) 
+	String pswd = keyboard.next(); 
+
+	test = userName.indexOf(usrnm);
+	pswdIndex = userPass.get(test);
+	
+	while (input.hasNextLine()) 
 	{ 
-		while (input.hasNextLine()) 
+		if (pswd == pswdIndex) 
 		{ 
-			String[] line = input.nextLine().split(" "); 
-			if (line[0].equals(user) && line[1].equals(pass)) 
-			{ 
-				System.out.print("Welcome"); i = 1; } } 
-			}
-			if(i==0) 
-			{
-				System.out.println("Password or Username is incorrect"); 
-			} 
+			System.out.print("Welcome"); 
+			i = 1; } } 
+		}
+		if(i==0) 
+		{
+			System.out.println("Password or Username is incorrect"); 
+		} 
 			
 }
 } 
@@ -86,7 +88,6 @@ else
 }
 }
 }
-
 =====================================
 //main events class
 
