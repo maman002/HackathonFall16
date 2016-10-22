@@ -15,6 +15,7 @@ String pswd;
 //go to register class
 
 }
+}
 
 =====================================
 //Successful/Unsuccessful Login
@@ -43,9 +44,9 @@ while (i == 0)
 			{ 
 				System.out.print("Welcome"); i = 1; } } 
 			}
-				if(i==0) 
-				{
-					System.out.println("Password or Username is incorrect"); 
+			if(i==0) 
+			{
+				System.out.println("Password or Username is incorrect"); 
 			} 
 			
 }
@@ -73,15 +74,17 @@ boolean inUse = userName.contains(inpUser);
 
 if (inUse == true)
 {
- System.out.println("Name is already in use");
- //clear button
+ 	System.out.println("Name is already in use");
+ 	//clear button
 }
 else
 {
- userName.add(usrnm);
- userPass.add(pswd);
- System.out.println("Welcome");
- //Move to next screen
+ 	userName.add(usrnm);
+ 	userPass.add(pswd);
+ 	System.out.println("Welcome");
+ 	//Move to next screen
+}
+}
 }
 
 =====================================
@@ -161,5 +164,7 @@ while ( (eventarray[i] =! Null)  )
 		System.out.println(eventarray[i].eventList);
 	}
 	i++;
+}
+}
 }
 
