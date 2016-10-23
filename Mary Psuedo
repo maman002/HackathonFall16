@@ -169,3 +169,20 @@ while ( (eventarray[i] =! Null)  )
 }
 }
 
+/* //Take info from "Invite" box 	
+//Add events to those users' "My Events" page under "Response Required"
+public void inviteFriends(event)
+{
+while ( input )
+{
+String friend = keyboard.next();
+ boolean activeUser = userName(friend);
+
+if (activeUser == true)
+{
+//add the user to the event's attendy list
+eventUsernames.add(friend);
+				
+//add the event to the user's Response Required list */
+
+
