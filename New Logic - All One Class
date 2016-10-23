@@ -115,6 +115,14 @@ int removeIndex = userRReventList.indexOf(event);
 userRReventList.remove(removeIndex);
 }
 
+//If Decline button pressed
+public void declineEvent(event)
+{	
+
+int removeIndex = userRReventList.indexOf(event);
+userRReventList.remove(removeIndex);
+}
+
 //Print a user's Event List
 public void myEventList(usrnm)
 {
