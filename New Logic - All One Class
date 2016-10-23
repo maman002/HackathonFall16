@@ -23,7 +23,8 @@ public class UserEvents { public void run() {
   //variables to store event occasion, user details, and overall event info
   public String eventOccasion;
   public String eventDetail;
-  public String event = eventOccasion + " " + eventDetail;
+  public String eventLocation;
+  public String event = eventLocation + " " + eventOccasion + " " + eventDetail;
 
   public 	Scanner keyboard = new Scanner(System.in); 
 
