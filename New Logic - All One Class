@@ -126,19 +126,6 @@ userRReventList.remove(removeIndex);
 //Print a user's Event List
 public void myEventList(usrnm)
 {
-System.out.println("Response Required");
-for (String str : userRReventList) 
-{
-System.out.println(str);
-}
-
-System.out.println("Accepted Events");
-for (String str : userAcceptEventList) 
-{
-System.out.println(str);
-}
-}
-	
 	//"My Events" with JLabels
 	int rr = 0;
         int a = 0;
