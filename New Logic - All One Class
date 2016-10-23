@@ -141,5 +141,27 @@ for (String str : userAcceptEventList)
 System.out.println(str);
 }
 }
+	
+	//"My Events" with JLabels
+	int rr = 0;
+        int a = 0;
+        add(new JLabel("Response Required"), BorderLayout.CENTER);
+        while (rr < 6)
+        {	
+        	for (String str : userRReventList) 
+        	{
+        		add(new JLabel(str), BorderLayout.CENTER));
+        	}
+        	rr++;
+        }
+        add(new JLabel("Accepted Events"), BorderLayout.CENTER);
+        while (a < 6)
+        {	
+        	for (String str : userAcceptEventList) 
+        	{
+        		add(new JLabel(str), BorderLayout.CENTER));
+        	}
+        	a++;
+        }
 
 }
