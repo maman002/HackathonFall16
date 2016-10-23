@@ -2,4 +2,6 @@
 
 Team CMMM Labs
 
-A .jar file is included in the zip. Use this to run the project.
+A JAR file is included in the zip. Use this to run the project.
+
+Note: The picture has to be in the same directory as the JAR file inorder to run the project appropriately.
