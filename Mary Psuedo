@@ -186,3 +186,15 @@ eventUsernames.add(friend);
 //add the event to the user's Response Required list */
 
 
+System.out.println("Response Required");
+for (String str : userRReventList) 
+{
+System.out.println(str);
+}
+
+System.out.println("Accepted Events");
+for (String str : userAcceptEventList) 
+{
+System.out.println(str);
+}
+}
