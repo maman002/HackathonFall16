@@ -146,7 +146,7 @@ System.out.println(str);
 	int rr = 0;
         int a = 0;
         add(new JLabel("Response Required"), BorderLayout.CENTER);
-        while (rr < 6)
+        while (rr < 5)
         {	
         	for (String str : userRReventList) 
         	{
@@ -155,7 +155,7 @@ System.out.println(str);
         	rr++;
         }
         add(new JLabel("Accepted Events"), BorderLayout.CENTER);
-        while (a < 6)
+        while (a < 5)
         {	
         	for (String str : userAcceptEventList) 
         	{
