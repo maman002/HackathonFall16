@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class UserEvents { public void run() { 
 
+=======================================================
+USERS
   //array lists for users
   public ArrayList<String> userName = new ArrayList<String>(5);
   public ArrayList<String> userPass = new ArrayList<String>(5);
@@ -11,20 +13,10 @@ public class UserEvents { public void run() {
   //array list for invitees
   public ArrayList<String> friendList = new ArrayList<String>(5);
 	
-  //array lists for events and event attendees
-  public ArrayList<String> eventUsernames = new ArrayList<String>(5);
-  public ArrayList<String> userRReventList = new ArrayList<String>(5);
-  public ArrayList<String> userAcceptEventList = new ArrayList<String>(5);
-	
+
   //variables to store username and password from input
   public String usrnm;
   public String pswd;
-
-  //variables to store event occasion, user details, and overall event info
-  public String eventOccasion;
-  public String eventDetail;
-  public String eventLocation;
-  public String event = eventLocation + " " + eventOccasion + " " + eventDetail;
 
   public 	Scanner keyboard = new Scanner(System.in); 
 
@@ -94,26 +86,23 @@ System.out.println("Password or Username is incorrect");
 
 }
 }
+===========================================
+EVENTS 
 
-//Take info from "Invite" box 	
-//Add events to those users' "My Events" page under "Response Required"
-public void inviteFriends(event)
-{
-while ( input )
-{
-String friend = keyboard.next();
-boolean activeUser = userName(friend);
+  //variables to store event occasion, user details, and overall event info
+  public String eventOccasion;
+  public String eventDetail;
+  public String eventLocation;
+  public String event = eventLocation + " " + eventOccasion + " " + eventDetail;
+  
+    //array lists for events and event attendees
+  public ArrayList<String> eventUsernames = new ArrayList<String>(5);
+  public ArrayList<String> userRReventList = new ArrayList<String>(5);
+  public ArrayList<String> userAcceptEventList = new ArrayList<String>(5);
 
-if (activeUser == true)
-{
-//add the user to the event's attendy list
-eventUsernames.add(friend);
-				
-//add the event to the user's Response Required list
+// SUMBIT BUTTON ACTOIN
 userRREventList.add(event);
-}
-}
-}
+
 
 //If Accept button pressed
 public void acceptEvent(event)
